@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제비뽑기</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>일산다이스 오늘의 대장</h1>
+    <button onclick="pickLeader()">클릭하세요</button>
+    <div id="result"></div>
+
+    <script>
+        function pickLeader() {
+            const leaders = ["김진휘", "이충택", "임동섭", "오창열"];
+            const randomIndex = Math.floor(Math.random() * leaders.length);
+            const selectedLeader = leaders[randomIndex];
+            document.getElementById('result').innerText = selectedLeader;
+        }
+    </script>
+</body>
+</html>
